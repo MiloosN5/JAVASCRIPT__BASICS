@@ -5,3 +5,4 @@
 
 1. data types
 2. let & var
+3. prototype
