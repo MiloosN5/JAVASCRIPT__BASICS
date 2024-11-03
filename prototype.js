@@ -1,6 +1,6 @@
 export const prototype = () => {
 
-    // + Object type
+    // +++++++++++++++ Object type
 
     console.log(Object.__proto__); // {}
     // browser console: ƒ () { [native code] }
@@ -15,7 +15,7 @@ export const prototype = () => {
         console.error(error.message); // Cannot convert undefined or null to object
     }
 
-    // + Object type instance(s)
+    // +++++++++++++++ Object type instance(s)
 
     const obj_1 = {};
 
@@ -34,7 +34,7 @@ export const prototype = () => {
     console.log(Object.getPrototypeOf(obj_2)); // [Object: null prototype] {}
     console.log(Object.getPrototypeOf(obj_2) === Object.prototype); // true
 
-    // + Date object instance
+    // +++++++++++++++ Date object instance
 
     const obj_3 = new Date();
     let obj_4 = obj_3; // reference to the date object instance
@@ -50,7 +50,7 @@ export const prototype = () => {
     console.log(Object.getPrototypeOf(obj_4)); // {}
     // browser console: {toString: ƒ, toDateString: ƒ, toTimeString: ƒ, toISOString: ƒ, toUTCString: ƒ, …}
 
-    // + Array object instance
+    // +++++++++++++++ Array object instance
 
     const arr_1 = [1, 2, 9, 4, 11];
     console.log(arr_1.prototype); // undefined
@@ -91,7 +91,7 @@ export const prototype = () => {
 
     console.log(arr_1.last()); // 11
 
-    // + Symbol object instance
+    // +++++++++++++++ Symbol object instance
 
     const symbol_1 = Symbol("id");
     console.log(symbol_1.prototype); // undefined
@@ -108,7 +108,7 @@ export const prototype = () => {
     console.log(Object.getPrototypeOf(boolean_1) === Boolean.prototype); // true
     console.log(boolean_1.__proto__ === Boolean.prototype); // true
 
-    // + Boolean object instance
+    // +++++++++++++++ Boolean object instance
     const boolean_2 = new Boolean(true);
     console.log(boolean_2.prototype); // undefined
     console.log(boolean_2.__proto__); // {}
@@ -118,7 +118,7 @@ export const prototype = () => {
     console.log(Object.getPrototypeOf(boolean_2) === Boolean.prototype); // true
     console.log(boolean_2.__proto__ === Boolean.prototype); // true
 
-    // + String object instance
+    // +++++++++++++++ String object instance
 
     const str_1 = "hello";
     const str_2 = new String("hello");
@@ -136,7 +136,7 @@ export const prototype = () => {
     console.log(str_1.__proto__ === str_2.__proto__); // true
     console.log(Object.getPrototypeOf(str_1) === Object.getPrototypeOf(str_2)); // true
 
-    // + Functions
+    // +++++++++++++++ Functions
 
     // arrow functions don't have prototype property (they can't be used as a constructor, so they don't have prototype)
     const func_1 = () => {
