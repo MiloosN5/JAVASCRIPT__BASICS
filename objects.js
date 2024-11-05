@@ -290,7 +290,7 @@ export const objects = () => {
       obj_23.job = "Web developer";
       console.log(obj_23);
     } catch (error) {
-      console.error(error.message); // Cannot add property age, object is not extensible
+      console.error(error.message); // Cannot add property job, object is not extensibl
     }
   
     // +++++++++++++++ Object.freeze() + Object.isFrozen()
@@ -351,10 +351,10 @@ export const objects = () => {
     console.log(obj_26); // { name: 'Milica' }
     console.log(obj_27); // { name: 'Milica' }
   
-    obj_27.name = "Milica";
+    obj_27.name = "Ana";
   
-    console.log(obj_26); // { name: 'Milica' }
-    console.log(obj_27); // { name: 'Milica' }
+    console.log(obj_26); // { name: 'Ana' }
+    console.log(obj_27); // { name: 'Ana' }
   
     try {
       obj_26.age = 25;
@@ -362,8 +362,8 @@ export const objects = () => {
       console.error(error.message); // Cannot add property age, object is not extensible
     }
   
-    console.log(obj_26); // { name: 'Milica' }
-    console.log(obj_27); // { name: 'Milica' }
+    console.log(obj_26); // { name: 'Ana' }
+    console.log(obj_27); // { name: 'Ana' }
   
     try {
       obj_27.age = 25;
@@ -371,8 +371,8 @@ export const objects = () => {
       console.error(error.message); // Cannot add property age, object is not extensible
     }
   
-    console.log(obj_26); // { name: 'Milica' }
-    console.log(obj_27); // { name: 'Milica' }
+    console.log(obj_26); // { name: 'Ana' }
+    console.log(obj_27); // { name: 'Ana' }
   
     console.log(Object.isSealed(obj_26)); // true
     console.log(Object.isSealed(obj_27)); // true
