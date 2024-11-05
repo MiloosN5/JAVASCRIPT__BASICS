@@ -1,6 +1,6 @@
 export const objects = () => {
 
-    // + Object() - constructor
+    // +++++++++++++++ Object() - constructor
   
     const obj_1 = new Object();
     const obj_2 = new Object({ name: "Alisa" });
@@ -39,7 +39,7 @@ export const objects = () => {
     console.log(obj_4, typeof (obj_4)); // [BigInt: 5n] object
     console.log(obj_5, typeof (obj_5)); // [Symbol: Symbol(id)] object
   
-    // + Object.assign() - create a new object by copying properties from 'obj'
+    // +++++++++++++++ Object.assign() - create a new object by copying properties from 'obj'
   
     // 1
   
@@ -119,7 +119,7 @@ export const objects = () => {
     }
     obj_14.greet(); // hello, my name is Irma!
   
-    // + Object.create() - create a new object with 'obj' as a prototyper
+    // +++++++++++++++ Object.create() - create a new object with 'obj' as a prototyper
   
     const proto_1 = {
       greet() {
@@ -133,7 +133,7 @@ export const objects = () => {
     obj_15.name = "Larisa";
     console.log(obj_15, typeof (obj_15)); // { name: 'Larisa' } object
   
-    // + Object.defineProperties()
+    // +++++++++++++++ Object.defineProperties()
   
     const obj_16 = { name: "Paula" };
   
@@ -231,12 +231,12 @@ export const objects = () => {
   
     console.log(obj_16); // { favAnimal: 'elephant' }
   
-    // + Object.entries() -  returning a array of pairs [key, value]
+    // +++++++++++++++ Object.entries() -  returning a array of pairs [key, value]
   
     const obj_17 = { name: "Dejan", age: 30, favCity: "Belgrade" };
     console.log(Object.entries(obj_17), typeof (Object.entries(obj_17))) // [ [ 'name', 'Dejan' ], [ 'age', 30 ], [ 'favCity', 'Belgrade' ] ] object
   
-    // + Object.keys() + Object.values()
+    // +++++++++++++++ Object.keys() + Object.values()
   
     const obj_18 = { foo: "bar", baz: 42 };
     console.log(Object.keys(obj_18)); // ['foo', 'baz']
@@ -274,7 +274,7 @@ export const objects = () => {
     console.log(Object.keys(104)); // []
     console.log(Object.values(104)); // []
   
-    // + Object.isExtensible() + Object.preventExtensions()
+    // +++++++++++++++ Object.isExtensible() + Object.preventExtensions()
   
     // NOTE: seald & frozen objects are by definition non-extensible
   
@@ -293,7 +293,7 @@ export const objects = () => {
       console.error(error.message); // Cannot add property age, object is not extensible
     }
   
-    // + Object.freeze() + Object.isFrozen()
+    // +++++++++++++++ Object.freeze() + Object.isFrozen()
   
     const obj_24 = { name: "Mirjana" };
     const obj_25 = Object.freeze(obj_24);
@@ -339,7 +339,7 @@ export const objects = () => {
     console.log(Object.isFrozen(obj_24)); // true
     console.log(Object.isFrozen(obj_25)); // true
   
-    // + Object.seal() + Object.isSealed()
+    // +++++++++++++++ Object.seal() + Object.isSealed()
   
     const obj_26 = { name: "Svetlana" };
     const obj_27 = Object.seal(obj_26);
@@ -377,7 +377,7 @@ export const objects = () => {
     console.log(Object.isSealed(obj_26)); // true
     console.log(Object.isSealed(obj_27)); // true
   
-    // + Object.fromEntries()
+    // +++++++++++++++ Object.fromEntries()
   
     // 1
   
@@ -399,7 +399,7 @@ export const objects = () => {
     const obj_29 = Object.fromEntries(arr_1);
     console.log(obj_29, typeof (obj_29)); // { music: 'pop', year: 2024 } object
   
-    // + Object.getOwnPropertyDescriptor(s)()
+    // +++++++++++++++ Object.getOwnPropertyDescriptor(s)()
   
     const obj_30 = { name: "Pavel", gender: "male" };
     console.log(Object.getOwnPropertyDescriptor(obj_30, "gender")); // { value: 'male', writable: true, enumerable: true, configurable: true }
@@ -422,7 +422,7 @@ export const objects = () => {
       }
     */
   
-    // + Object.getOwnPropertyNames() - returning all of the direct object properties, despite being enumerable or not
+    // +++++++++++++++ Object.getOwnPropertyNames() - returning all of the direct object properties, despite being enumerable or not
   
     const obj_31 = { name: "Paula" };
   
@@ -463,7 +463,7 @@ export const objects = () => {
     console.log(Object.keys(obj_31)); // [ 'name', 'age', 'favColor', 'favAnimal' ]
     console.log(Object.getOwnPropertyNames(obj_31)); // [ 'name', 'age', 'favColor', 'favSport', 'favAnimal', 'favCity' ]
   
-    // + Object.getOwnPropertySymbols()
+    // +++++++++++++++ Object.getOwnPropertySymbols()
   
     const obj_32 = {};
     const symbol_3 = Symbol("a");
@@ -479,7 +479,7 @@ export const objects = () => {
     console.log(obj_33[0]); // Symbol(a)
     console.log(obj_33[1]); // Symbol(b)
   
-    // + Object.getPrototypeOf() - vraca prototip objekta
+    // +++++++++++++++ Object.getPrototypeOf() - vraca prototip objekta
   
     const obj_34 = { name: "Igor", country: "Serbia" };
     console.log(Object.getPrototypeOf(obj_34)); // [Object: null prototype] {}
@@ -490,7 +490,7 @@ export const objects = () => {
     console.log(obj_35.name); // Jack
     console.log(Object.getPrototypeOf(obj_35) === proto_2); // true
   
-    // + Object.setPrototypeOf() - setting a object prototype
+    // +++++++++++++++ Object.setPrototypeOf() - setting a object prototype
   
     const obj_36 = { name: "Igor", country: "Serbia" };
     const proto_3 = { protoProp: 'new_value' };
@@ -506,7 +506,7 @@ export const objects = () => {
     Object.setPrototypeOf(obj_37, proto_4);
     console.log(obj_37.foo); // bar
   
-    // + Object.hasOwn()
+    // +++++++++++++++ Object.hasOwn()
   
     // 1
   
@@ -571,7 +571,7 @@ export const objects = () => {
     console.log(Object.hasOwn(obj_41, "name")); // true
     console.log(Object.hasOwn(obj_41, "greet")); // false
   
-    // + Object.is() - checking that two objects are strictly equal
+    // +++++++++++++++ Object.is() - checking that two objects are strictly equal
   
     const obj_42 = { user: "user_1", credentials: { email: "email1", password: "password1" } }
     const obj_43 = { user: "user_2", credentials: { email: "email2", password: "password2" } }
@@ -602,9 +602,9 @@ export const objects = () => {
   
     console.log('----------------------');
   
-    // ++++++++++ Object.prototype
+    // +++++++++++++++ Object.prototype
   
-    // + Object.prototype.hasOwnProperty()
+    // +++++++++++++++ Object.prototype.hasOwnProperty()
   
     const obj_46 = { name: "Marko" };
     console.log(obj_46.hasOwnProperty("name")); // true
@@ -612,7 +612,7 @@ export const objects = () => {
     console.log(Object.hasOwn(obj_46, "name")); // true
     console.log(Object.hasOwn(obj_46, "toString")); // false
   
-    // + Object.prototype.isPrototypeOf()
+    // +++++++++++++++ Object.prototype.isPrototypeOf()
   
     function Person_4() { }
     const obj_47 = new Person_4();
@@ -620,7 +620,7 @@ export const objects = () => {
     console.log(obj_47.isPrototypeOf()); // false
     console.log(Object.getPrototypeOf(obj_47) === Person_4.prototype) // true
   
-    // + Object.prototype.propertyIsEnumerable()
+    // +++++++++++++++ Object.prototype.propertyIsEnumerable()
   
     const obj_48 = { name: "Ana" };
     console.log(obj_48.propertyIsEnumerable("name")); // true
@@ -633,18 +633,18 @@ export const objects = () => {
       console.error(error.message); // Cannot read properties of undefined (reading 'enumerable')
     }
   
-    // + Object.prototype.toLocaleString()
+    // +++++++++++++++ Object.prototype.toLocaleString()
   
     const obj_49 = new Date();
     console.log(obj_49.toLocaleString()); // example: "10/30/2024, 5:10:22 PM" (depending on the localization)
   
   
-    // + Object.prototype.toString()
+    // +++++++++++++++ Object.prototype.toString()
   
     const obj_50 = { name: "Marko" };
     console.log(obj_50.toString()); // "[object Object]"
   
-    // + Object.prototype.valueOf()
+    // +++++++++++++++ Object.prototype.valueOf()
   
     const obj_51 = { name: "Marko" };
     console.log(obj_51.valueOf()); // { name: "Marko" }
