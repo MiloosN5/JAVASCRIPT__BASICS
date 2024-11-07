@@ -50,14 +50,14 @@ export const hoisting = () => {
     // function + let
 
     try {
-        myFunc3(); // myFunc3 is not a function
+        myFunc3(); 
     } catch (error) {
-        console.error(error.message)
+        console.error(error.message) // // Cannot access 'myFunc3' before initialization
     }
     
 
     let myFunc3 = function () {
-        console.log("myFunc3"); // Cannot access 'myFunc3' before initialization
+        console.log("myFunc3"); 
     };    
 
     // function + const
@@ -65,7 +65,7 @@ export const hoisting = () => {
     try {
         myFunc4(); 
     } catch (error) {
-        console.error(error.message) // Cannot access 'myFunc3' before initialization
+        console.error(error.message) // Cannot access 'myFunc4' before initialization
     }
     
 
