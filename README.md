@@ -7,3 +7,4 @@
 2. let & var
 3. prototype
 4. objects
+5. hoisting
