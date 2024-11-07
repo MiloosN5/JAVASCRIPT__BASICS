@@ -69,7 +69,7 @@ export const hoisting = () => {
     }
     
 
-    let myFunc4 = function () {
+    const myFunc4 = function () {
         console.log("myFunc4");
     };  
 
