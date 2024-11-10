@@ -478,7 +478,7 @@ export const functions = () => {
       console.log("Hello after 2 seconds!"); // Hello after 2 seconds! (with the delay of 2 seconds)
     }, 2000);
 
-  // +++++++++++++++ function + Function() object
+  // +++++++++++++++ local VS global variable access
 
     // ------ 1
     var x_49 = 10;
