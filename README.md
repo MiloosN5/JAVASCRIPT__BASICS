@@ -1,5 +1,5 @@
 # JAVASCRIPT__BASICS
- Demonstration of different examples for a certain topic
+ Demonstration of different examples for a certain topic using Node.js
 
 ## Lessons
 
