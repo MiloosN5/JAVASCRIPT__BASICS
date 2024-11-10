@@ -68,7 +68,7 @@ export const functions = () => {
     
     // ------ 3 another arrow function 
     const func_10 = (a_10) => {
-      // const a_10 = () => { } // yntaxError: Identifier 'a_10' has already been declared
+      // const a_10 = () => { } // SyntaxError: Identifier 'a_10' has already been declared
       console.log(typeof a_10); // number
     }
     func_10(2);    
