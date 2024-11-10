@@ -57,21 +57,21 @@ export const functions = () => {
       console.log(typeof a_08); // function
       console.log(typeof b_08); // number
     }
-    func_08(2, 9); // function
+    func_08(2, 9); 
 
     // ------ 2 another function expression
     const func_09 = function(a_09) {
       // const a_09 = function() { } // SyntaxError: Identifier 'a_09' has already been declared
       console.log(typeof a_09); // number
     }
-    func_09(2); // function   
+    func_09(2);    
     
     // ------ 3 another arrow function 
     const func_10 = (a_10) => {
       // const a_10 = () => { } // yntaxError: Identifier 'a_10' has already been declared
       console.log(typeof a_10); // number
     }
-    func_10(2); // function     
+    func_10(2);    
 
     // ------ 5 object
     const obj_1 = {
