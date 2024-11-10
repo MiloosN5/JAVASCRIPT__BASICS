@@ -115,14 +115,16 @@ export const functions = () => {
 
       // ------ 1 
       function func_14() {
+        var a_14 = "text_14"
         func_14 = 10;
-        return func_14;
+        return [a_14, func_14];
       }
       console.log(func_14); // [Function: func_14]
-      console.log(func_14()); // 10
+      console.log(func_14()); // [ 'text_14', 10 ]
 
       // ------ 2
       function func_14a() {
+        var a_14a = "text_14a"
         func_14a = 10;
       }
       console.log(func_14a); // [Function: func_14a]
@@ -169,8 +171,11 @@ export const functions = () => {
         // console.log(function18); // ReferenceError: function18 is not defined   
         
         var func_19 = function func_19() {
+          let a_19 = "text_19"
           // func_19 = 25; // TypeError: Assignment to constant variable.
+          return [a_19, func_19]
         };
+        console.log(func_19()); // [ 'text_19', [Function: func_19] ]
         console.log(func_19); // [Function: func_19]
 
       // let 
@@ -198,37 +203,45 @@ export const functions = () => {
         
         // ------ 4
         let func_23 = function func_23() {
+          let a_23 = [5, "aaa"]
           // func_23 = 30; // TypeError: Assignment to constant variable.
+          return [a_23, func_23]
         };
+        console.log(func_23()); // [ [ 5, 'aaa' ], [Function: func_23] ]
         console.log(func_23); // [Function: func_23]
 
       // const 
 
         // ------ 1  
-        let func_24 = function () {
-          func_24 = 44;
+        const func_24 = function () {
+          let a_24 = "text_24"
+          // func_24 = 44; // TypeError: Assignment to constant variable.
+          return [a_24, func_24]
         };
-        func_24();
-        console.log(func_24); // 44 
+        console.log(func_24()); // [ 'text_24', [Function: func_24] ]
+        console.log(func_24); // [Function: func_24]
 
         // ------ 2
-        let func_25 = function () {
+        const func_25 = function () {
           // foo_25 = 44; // ReferenceError: foo_25 is not defined
         };
         func_25();
         // console.log(foo_25); // ReferenceError: foo_25 is not defined  
 
         // ------ 3   
-        let func_26 = function function26() {
+        const func_26 = function function26() {
           // function26 = 44; // TypeError: Assignment to constant variable.
         };
         func_26();
         // console.log(function26); // ReferenceError: function26 is not defined     
         
         // ------ 4
-        let func_27 = function func_27() {
+        const func_27 = function func_27() {
+          const a_27 = [true, 5]
           // func_27 = 44; // TypeError: Assignment to constant variable.
+          return [a_27, func_27]
         };
+        console.log(func_27()); // [ [ true, 5 ], [Function: func_27] ]
         console.log(func_27); // [Function: func_27]
         
     // 3 - arrow function
@@ -278,15 +291,16 @@ export const functions = () => {
       // const 
 
         // ------ 1
-        let func_32 = () => {
-          func_32 = [3, 8];
+        const func_32 = () => {
+          var a_32 = "text_32";
+          // func_32 = [3, 8]; // TypeError: Assignment to constant variable.
+          return [a_32, func_32]
         };
         console.log(func_32); // [Function: func_32]
-        func_32();
-        console.log(func_32); // [3, 8]
+        console.log(func_32()); // [ 'text_32', [Function: func_32] ]
 
         // ------ 2
-        let func_33 = () => {
+        const func_33 = () => {
           // foo_33 = [3, 8]; // ReferenceError: foo_33 is not defined
         };
         func_33();
