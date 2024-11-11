@@ -192,7 +192,7 @@ export const functions = () => {
           // foo_21 = 30; // ReferenceError: foo_21 is not defined
         };
         func_21();
-        // console.log(foo_1); // ReferenceError: foo_1 is not defined  
+        // console.log(foo_21); // ReferenceError: foo_21 is not defined  
 
         // ------ 3   
         let func_22 = function function22() {
