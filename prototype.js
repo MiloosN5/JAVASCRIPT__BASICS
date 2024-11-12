@@ -98,7 +98,7 @@ export const prototype = () => {
     console.log(symbol_1.__proto__); // Object [Symbol] {}
     console.log(Object.getPrototypeOf(symbol_1)); // Object [Symbol] {}
 
-    // Boolean 
+    // +++++++++++++++ Boolean 
 
     // primitive value
     const boolean_1 = Boolean(true);
@@ -108,7 +108,7 @@ export const prototype = () => {
     console.log(Object.getPrototypeOf(boolean_1) === Boolean.prototype); // true
     console.log(boolean_1.__proto__ === Boolean.prototype); // true
 
-    // +++++++++++++++ Boolean object instance
+    // Boolean object instance
     const boolean_2 = new Boolean(true);
     console.log(boolean_2.prototype); // undefined
     console.log(boolean_2.__proto__); // {}
@@ -145,6 +145,7 @@ export const prototype = () => {
         let c = a + b;
         return c;
     }
+    const function_1 = func_1();
 
     console.log(func_1.prototype); // undefined
     console.log(func_1.__proto__); // {}
@@ -153,10 +154,19 @@ export const prototype = () => {
     // browser console: ƒ () { [native code] }
     console.log(Object.getPrototypeOf(func_1) === Function.prototype); // true
 
+    console.log(function_1.prototype); // undefined
+    console.log(function_1.__proto__); // {}
+    // browser console: Number {0, toExponential: ƒ, toFixed: ƒ, toPrecision: ƒ, toString: ƒ, …}
+    console.log(Object.getPrototypeOf(function_1)); // {}
+    // browser console: Number {0, toExponential: ƒ, toFixed: ƒ, toPrecision: ƒ, toString: ƒ, …}
+    console.log(Object.getPrototypeOf(function_1) === Function.prototype); // false   
+
     // regular functions have prototype property
     function func_2() {
         return "Hello";
     }
+    const function_2 = func_2();
+    const function_3 = new func_2();
 
     console.log(func_2.prototype); // {}
     console.log(func_2.__proto__); // {}
@@ -164,6 +174,18 @@ export const prototype = () => {
     console.log(Object.getPrototypeOf(func_2)); // {}
     // browser console: ƒ () { [native code] }
     console.log(Object.getPrototypeOf(func_2) === Function.prototype); // true
+
+    console.log(function_2.prototype); // undefined
+    console.log(function_2.__proto__); // {}
+    // browser console: String {'', anchor: ƒ, at: ƒ, big: ƒ, blink: ƒ, …}
+    console.log(Object.getPrototypeOf(function_2)); // {}
+    // browser console: String {'', anchor: ƒ, at: ƒ, big: ƒ, blink: ƒ, …}
+    console.log(Object.getPrototypeOf(function_2) === Function.prototype); // false
+    
+    console.log(function_3.prototype); // undefined
+    console.log(function_3.__proto__); // {}
+    console.log(Object.getPrototypeOf(function_3)); // {}
+    console.log(Object.getPrototypeOf(function_3) === Function.prototype); // false    
 
     //  constructor  + prototype method
     function Person(name) {
