@@ -7,7 +7,7 @@ import { functions } from "./functions.js";
 
 // dataTypes();
 // letVar();
-// prototype();
+prototype();
 // objects();
 // hoisting();
-functions();
+// functions();
