@@ -114,11 +114,15 @@ export const closure = () => {
     
     const counter = createCounter();
     console.log([count_1, count_2]) // [ 0, 0 ]
-    console.log(counter.increment()); // [ 1, 1 ]
-    console.log(counter.increment()); // [ 2, 2 ]
-    console.log(counter.decrement()); // [ 1, 1 ]
-    console.log(counter.reset());     // [ 0, 0 ]
+    console.log(counter.increment()); // [ 1, 1, 1, 1 ]
+    console.log(counter.increment()); // [ 2, 2, 2, 2 ]
+    console.log(counter.decrement()); // [ 1, 1, 1, 1 ]
+    console.log(counter.reset());     // [ 0, 0, 0, 0 ]
     console.log([count_1, count_2]) // [ 0, 0 ]
+    console.log(counter.increment()); // [ 1, 1, 1, 1 ]
+    console.log(counter.increment()); // [ 1, 1, 2, 2 ]
+    console.log(counter.increment()); // [ 1, 1, 3, 3 ]
+    console.log([count_1, count_2]) // [ 3, 3 ]
 
     // +++++++++++++++ settings
 
