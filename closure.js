@@ -77,11 +77,14 @@ export const closure = () => {
             {
                 console.log(nest_2); // 30
                 console.log(nest_3); // 20
+                var nest_4 = 51;
+                let nest_5 = 52;
             }
         }
     }
 
-    console.log([nest_1, nest_2, nest_3]) // [ 30, 30, 20 ]
+    console.log([nest_1, nest_2, nest_3, nest_4]) // [ 30, 30, 20, 51 ]
+    // console.log(nest_5); // ReferenceError: nest_5 is not defined
 
     // +++++++++++++++ counter
 
