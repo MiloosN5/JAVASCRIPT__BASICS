@@ -10,3 +10,4 @@
 5. hoisting
 6. functions
 7. closure
+8. type conversion
