@@ -5,6 +5,7 @@ import { objects } from "./objects.js";
 import { hoisting } from "./hoisting.js";
 import { functions } from "./functions.js";
 import { closure } from "./closure.js";
+import { typeConversion } from "./type-conversion.js";
 
 // dataTypes();
 // letVar();
@@ -12,4 +13,5 @@ import { closure } from "./closure.js";
 // objects();
 // hoisting();
 // functions();
-closure();
+// closure();
+typeConversion();
