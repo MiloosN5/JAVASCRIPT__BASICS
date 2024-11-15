@@ -175,16 +175,26 @@ export const typeConversion = () => {
 
             // [string - boolean] & [boolean - string] 
 
+            console.log('-----------')
                 const sub_strbool_1 = "5" - true
                 const sub_strbool_2 =  true - "5"
-                const sub_strbool_3 = "text" - false
-                const sub_strbool_4 = false - "text"
+                const sub_strbool_3 = "5" - false
+                const sub_strbool_4 =  false - "5"
+                const sub_strbool_5 = "text" - true
+                const sub_strbool_6 = true - "text"
+                const sub_strbool_7 = "text" - false
+                const sub_strbool_8 = false - "text"
                 console.log(sub_strbool_1, typeof (sub_strbool_1)) // 4 number
                 console.log(sub_strbool_2, typeof (sub_strbool_2)) // -4 number
-                console.log(sub_strbool_3, typeof (sub_strbool_3)) // NaN number
-                console.log(sub_strbool_4, typeof (sub_strbool_4)) // NaN number
+                console.log(sub_strbool_3, typeof (sub_strbool_3)) // 5 number
+                console.log(sub_strbool_4, typeof (sub_strbool_4)) // -5 number
+                console.log(sub_strbool_5, typeof (sub_strbool_5)) // NaN number 
+                console.log(sub_strbool_6, typeof (sub_strbool_6)) // NaN number 
+                console.log(sub_strbool_7, typeof (sub_strbool_7)) // NaN number 
+                console.log(sub_strbool_8, typeof (sub_strbool_8)) // NaN number 
 
             // [string - NaN] & [NaN - string] 
+            console.log('-----------')
             
                 const sub_strnan_1 = "5" - NaN
                 const sub_strnan_2 =  NaN - "5"
