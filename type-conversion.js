@@ -723,7 +723,7 @@ export const typeConversion = () => {
         }
 
         const str_5 = obj_1.count;
-        console.log(str_2 === 100) // false
+        console.log(str_5 === 100) // false
         const str_5_converted = Number(str_5)
         console.log(str_5_converted === 100) // true
 
