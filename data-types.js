@@ -1,6 +1,6 @@
 export const dataTypes = () => {
 
-    // PRIMITIVE
+    // +++++++++++++++ PRIMITIVE
 
     // 1. NUMBER
     var int_1 = 10;
@@ -52,7 +52,7 @@ export const dataTypes = () => {
     var bigNum_4 = 83n;
     console.log('bigNum_1', bigNum_4, typeof (bigNum_4)); // bigNum_1 83n bigint    
 
-    // NON-PRIMITVE
+    // +++++++++++++++ NON-PRIMITVE
 
     // 1. OBJECT
     var person_1 = {
@@ -171,5 +171,21 @@ export const dataTypes = () => {
     var changedVal_1 = 42;
     changedVal_1 = "Hello";
     console.log('changedVal_1', changedVal_1, typeof (changedVal_1)); // changedVal_1 Hello string
+
+    // +++++++++++++++ LITERALS (both)
+
+    let literal_1 = 5; // numeric (integer)
+    let literal_2 = 5.4; // numeric (floating-point)
+    let literal_3 = "apple"; // string 
+    let literal_4 = 'apple'; // string
+    let literal_5 = true; // boolean
+    let literal_6 = false; // boolean
+    let literal_7 = [5, 4, 9]; // array
+    let literal_8 = {
+        property1: 'value1',
+        property2: 5
+    } // object
+    let literal_9 = /^a/; // regexp
+
 }
 
