@@ -12,6 +12,6 @@ import { typeConversion } from "./type-conversion.js";
 // prototype();
 // objects();
 // hoisting();
-// functions();
+functions();
 // closure();
-typeConversion();
+// typeConversion();

@@ -438,15 +438,20 @@ export const functions = () => {
 
     // 6 - IIFE
 
+      // ------ forbidden
+      // function func_47a() {
+      //   func_47a = 1;
+      // }(); // SyntaxError: Unexpected token ')'
+      
       // ------ 1
-      function func_47() {
-        func_47 = 1;
+      function func_47b() {
+        func_47b = 1;
       }
-      func_47();
-      console.log(func_47); // 1
+      func_47b();
+      console.log(func_47b); // 1
 
-      (function func_47() {
-        // func_47 = 3; // TypeError: Assignment to constant variable.
+      (function func_47b() {
+        // func_47b = 3; // TypeError: Assignment to constant variable.
       })();
 
       // ------ 2
