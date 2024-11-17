@@ -7,11 +7,11 @@ import { functions } from "./functions.js";
 import { closure } from "./closure.js";
 import { typeConversion } from "./type-conversion.js";
 
-dataTypes();
+// dataTypes();
 // letVar();
 // prototype();
 // objects();
 // hoisting();
 // functions();
 // closure();
-// typeConversion();
+typeConversion();
