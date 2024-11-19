@@ -78,8 +78,11 @@ export const objects = () => {
     const obj_13 = Object.assign({}, obj_12);
     console.log(obj_13, typeof (obj_13)); // { name: 'Peter', residence: { country: 'Slovakia', city: 'Martin' } } object
     console.log(obj_13.residence.city); // Martin
+    console.log(obj_13['residence'].city); // Martin
+    console.log(obj_13['residence']['city']); // Martin
   
     obj_13.residence.city = "Bratislava"
+    obj_13['favColor'] = 'brown'
     console.log(obj_12, typeof (obj_12))
     /*
       {
@@ -91,7 +94,8 @@ export const objects = () => {
     /*
       {
         name: 'Peter',
-        residence: { country: 'Slovakia', city: 'Bratislava' }
+        residence: { country: 'Slovakia', city: 'Bratislava' },
+        favColor: 'brown
       } object
     */
   
