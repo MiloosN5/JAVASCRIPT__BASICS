@@ -876,7 +876,7 @@ string text line 2`);
                 }
                 const instanceof_obj = new Instanceof_Class_1('Honda', 'Accord', 1998);
                 console.log(instanceof_obj instanceof Instanceof_Class_1); // true
-                console.log(instanceof_obj instanceof Instanceof_Class_1); // true
+                console.log(instanceof_obj instanceof Object); // true
 
             // in
             
