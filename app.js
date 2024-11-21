@@ -6,6 +6,7 @@ import { hoisting } from "./hoisting.js";
 import { functions } from "./functions.js";
 import { closure } from "./closure.js";
 import { typeConversion } from "./type-conversion.js";
+import { expressionsOperators } from "./expr-oper.js";
 
 // dataTypes();
 // letVar();
@@ -14,4 +15,5 @@ import { typeConversion } from "./type-conversion.js";
 // hoisting();
 // functions();
 // closure();
-typeConversion();
+// typeConversion();
+expressionsOperators();
