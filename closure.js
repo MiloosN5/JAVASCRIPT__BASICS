@@ -61,6 +61,86 @@ export const closure = () => {
     console.log([const_1, const_2, const_3, const_4, const_5]); // [ 5, 5, 5, 5, 5 ]
     // console.log(const_6); // ReferenceError: const_6 is not defined
 
+    // +++++++++++++++ for loop
+
+        // ------ 1 (use the outer variable)
+        var for_var1 = 10;
+        let for_let1 = 22;
+        const for_const1 = 34;
+
+        for(for_var1 = 0; for_var1 < 2; for_var1++) {
+            console.log("Value of the var: " + for_var1)
+            /*
+                Value of the var: 0
+                Value of the var: 1
+            */
+        }
+        for(for_let1 = 0; for_let1 < 2; for_let1++) {
+            console.log("Value of the var: " + for_let1)
+            /*
+                Value of the var: 0
+                Value of the var: 1
+            */            
+        }  
+        /*
+            TypeError: Assignment to constant variable.
+            for(for_const1 = 0; for_const1 < 2; for_const1++) {
+                console.log("Value of the var: " + for_const1)
+            } 
+        */            
+       
+        // ------ 2 (redeclare as a VAR)
+        var for_var2 = 10;
+        let for_let2 = 22;
+        const for_const2 = 34;
+
+        for(var for_var2 = 0; for_var2 < 2; for_var2++) {
+            console.log("Value of the var: " + for_var2)
+            /*
+                Value of the var: 0
+                Value of the var: 1
+            */
+        }      
+        /*
+            SyntaxError: Identifier 'for_let2' has already been declared
+            for(var for_let2 = 0; for_let2 < 2; for_let2++) {
+                console.log("Value of the var: " + for_let2)
+            }  
+        */    
+       /*
+            SyntaxError: Identifier 'for_const2' has already been declared
+            for(var for_const2 = 0; for_const2 < 2; for_const2++) {
+                console.log("Value of the var: " + for_const2)
+            }    
+        */       
+
+        // ------ 3 (redeclare as a LET)
+
+        var for_var3 = 10;
+        let for_let3 = 22;
+        const for_const3 = 34;
+
+        for(let for_var3 = 0; for_var3 < 2; for_var3++) {
+            console.log("Value of the var: " + for_var3)
+            /*
+                Value of the var: 0
+                Value of the var: 1
+            */
+        }      
+        for(let for_let3 = 0; for_let3 < 2; for_let3++) {
+            console.log("Value of the var: " + for_let3)
+            /*
+                Value of the var: 0
+                Value of the var: 1
+            */            
+        }  
+        /*
+            TypeError: Assignment to constant variable.
+            for(const for_const3 = 0; for_const3 < 2; for_const3++) {
+                console.log("Value of the var: " + for_const3)         
+            }         
+        */ 
+                             
     // +++++++++++++++ nesting scopes
 
     var nest_1 = 20;
