@@ -49,6 +49,31 @@ export const functions = () => {
     };
     console.log(funcArrow_3("Jack")); // Hello, Jack!
 
+  // +++++++++++++++ arguments
+
+    /*
+      function funcArgs_1(separator) {
+        let result = "";
+        for (let i = 1; i < argument.length; i++) { // ReferenceError: argument is not defined
+          result += argument[i] + separator;
+        }
+        return result;
+      }
+      console.log(funcArgs_1(", ", "red", "orange", "blue"));
+    */
+
+    function funcArgs_2(separator) {
+      let result = "";
+      for (let i = 1; i < arguments.length; i++) {
+        result += arguments[i];
+        if (i < arguments.length - 1) {
+          result += separator;
+        }
+      }
+      return result;
+    }
+    console.log(funcArgs_2(", ", "red", "orange", "blue")); // red, orange, blue
+  
   // +++++++++++++++ function inside
 
     // ------ 1 another function
