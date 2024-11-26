@@ -13,3 +13,4 @@
 8. type conversion
 9. expressions & operators 
 10. control flow
+11. Number (+ Number())
