@@ -244,14 +244,14 @@ export const numbers = () => {
 
             // Number.isSafeInteger()
 
-                Number.isSafeInteger(3); // true
-                Number.isSafeInteger(2 ** 53); // false
-                Number.isSafeInteger(2 ** 53 - 1); // true
-                Number.isSafeInteger(NaN); // false
-                Number.isSafeInteger(Infinity); // false
-                Number.isSafeInteger("3"); // false
-                Number.isSafeInteger(3.1); // false
-                Number.isSafeInteger(3.0); // true
+                console.log(Number.isSafeInteger(3)); // true
+                console.log(Number.isSafeInteger(2 ** 53)); // false
+                console.log(Number.isSafeInteger(2 ** 53 - 1)); // true
+                console.log(Number.isSafeInteger(NaN)); // false
+                console.log(Number.isSafeInteger(Infinity)); // false
+                console.log(Number.isSafeInteger("3")); // false
+                console.log(Number.isSafeInteger(3.1)); // false
+                console.log(Number.isSafeInteger(3.0)); // true
 
             // Number.parseFloat() -> parses a string arg & return a floating point number
 
