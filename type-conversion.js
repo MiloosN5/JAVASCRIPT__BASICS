@@ -668,6 +668,9 @@ export const typeConversion = () => {
             if(undefined) console.log('true (undefined)') // no output (because if condition is not true)
             if(null) console.log('true (null)') // no output (because if condition is not true)
             if(NaN) console.log('true (NaN)') // no output (because if condition is not true)
+            if(false) console.log('true (false)') // no output (because if condition is not true)
+            if('false') console.log('true (\'false\')') // true ('false')
+            if(0) console.log('true (0)') // no output (because if condition is not true)
 
         // negation (!)
 
