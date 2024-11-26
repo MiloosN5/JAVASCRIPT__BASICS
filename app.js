@@ -8,6 +8,7 @@ import { closure } from "./closure.js";
 import { typeConversion } from "./type-conversion.js";
 import { expressionsOperators } from "./expr-oper.js";
 import { controlFlow } from "./control-flow.js";
+import { numbers } from "./numbers.js";
 
 // dataTypes();
 // letVar();
@@ -18,4 +19,5 @@ import { controlFlow } from "./control-flow.js";
 // closure();
 // typeConversion();
 // expressionsOperators();
-controlFlow();
+// controlFlow();
+numbers();
