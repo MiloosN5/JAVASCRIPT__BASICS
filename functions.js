@@ -51,6 +51,7 @@ export const functions = () => {
 
   // +++++++++++++++ arguments
 
+    // ------ 1
     /*
       function funcArgs_1(separator) {
         let result = "";
@@ -62,6 +63,7 @@ export const functions = () => {
       console.log(funcArgs_1(", ", "red", "orange", "blue"));
     */
 
+    // ------ 2
     function funcArgs_2(separator) {
       let result = "";
       for (let i = 1; i < arguments.length; i++) {
@@ -73,6 +75,28 @@ export const functions = () => {
       return result;
     }
     console.log(funcArgs_2(", ", "red", "orange", "blue")); // red, orange, blue
+
+  // +++++++++++++++ parameters
+
+    // ------ 1 (missing passed value => parameters of functions default to undefined)
+    function funcParams_1(a, b) {
+      b = typeof b !== "undefined" ? b : 1;
+      return a * b;
+    }
+    console.log(funcParams_1(5)); // 5
+
+    // ------ 2 (default param(s))
+    function funcParams_2(a, b = 1) {
+      return a * b;
+    }
+    console.log(funcParams_2(5)); // 5
+
+     // ------ 3 (rest param)
+    function funcParams_3(multiplier, ...theArgs) {
+      return theArgs.map((x) => multiplier * x);
+    }
+    const funcParams_a3 = funcParams_3(5, 1, 2, 3);
+    console.log(funcParams_a3); // [5, 10, 15]
   
   // +++++++++++++++ function inside
 
