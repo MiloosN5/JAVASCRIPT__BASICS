@@ -603,9 +603,7 @@ export const objects = () => {
     console.log(Object.is(0, -0)); // false
     console.log(Object.is(0, +0)); // true
     console.log(Object.is(-0, +0)); // false
-  
-    console.log('----------------------');
-  
+    
     // +++++++++++++++ Object.prototype
   
     // +++++++++++++++ Object.prototype.hasOwnProperty()
@@ -645,9 +643,35 @@ export const objects = () => {
   
     // +++++++++++++++ Object.prototype.toString()
   
-    const obj_50 = { name: "Marko" };
-    console.log(obj_50.toString()); // "[object Object]"
+    // ------ 1
+    const toString_obj1 = { name: "Marko" };
+    console.log(toString_obj1.toString()); // "[object Object]"
+
+    // ------ 2
+    let toString_2 = 255;
+    console.log(toString_2.toString(2)) // 11111111
+    console.log(toString_2.toString(8)) // 377
+    console.log(toString_2.toString(10)) // 255
+    console.log(toString_2.toString(16)) // ff
+
+    // ------ 3
+    function ToString_3(name) {
+      this.name = name;
+    }
   
+    const toString_obj3 = new ToString_3('Gabby');
+    
+    ToString_3.prototype.toString = function toStringfunction3() {
+      return `${this.name}`;
+    };
+    
+    console.log(toString_obj3.toString()); // Gabby
+  
+    // ------ 4
+    const toString_obj4 = [1, 2, 3];
+    console.log(toString_obj4.toString()); // 1,2,3
+    console.log(Object.prototype.toString.call(toString_obj4)); // [object Array]
+
     // +++++++++++++++ Object.prototype.valueOf()
   
     const obj_51 = { name: "Marko" };
