@@ -646,13 +646,15 @@ export const objects = () => {
     // ------ 1
     const toString_obj1 = { name: "Marko" };
     console.log(toString_obj1.toString()); // "[object Object]"
+    console.log(Object.prototype.toString.call(toString_obj1)); // [object Object]
 
     // ------ 2
-    let toString_2 = 255;
-    console.log(toString_2.toString(2)) // 11111111
-    console.log(toString_2.toString(8)) // 377
-    console.log(toString_2.toString(10)) // 255
-    console.log(toString_2.toString(16)) // ff
+    let toString_obj2 = 255;
+    console.log(toString_obj2.toString(2)) // 11111111
+    console.log(toString_obj2.toString(8)) // 377
+    console.log(toString_obj2.toString(10)) // 255
+    console.log(toString_obj2.toString(16)) // ff
+    console.log(Object.prototype.toString.call(toString_obj2)); // [object Number]
 
     // ------ 3
     function ToString_3(name) {
@@ -666,11 +668,43 @@ export const objects = () => {
     };
     
     console.log(toString_obj3.toString()); // Gabby
+    console.log(Object.prototype.toString.call(toString_obj3)); // [object Object]
+    console.log(Object.prototype.toString.call(ToString_3)); // [object Function]
   
     // ------ 4
     const toString_obj4 = [1, 2, 3];
     console.log(toString_obj4.toString()); // 1,2,3
     console.log(Object.prototype.toString.call(toString_obj4)); // [object Array]
+
+    // ------ 5
+    const toString_obj5 = new Function();
+    console.log(toString_obj5.toString()); // function anonymous() {}
+    console.log(Object.prototype.toString.call(toString_obj5)); // [object Function]
+    
+    // ------ 6
+    const toString_obj6 = new Error();
+    console.log(toString_obj6.toString()); // Error
+    console.log(Object.prototype.toString.call(toString_obj6)); // [object Error]
+
+    // ------ 7
+    const toString_obj7 = new Boolean();
+    console.log(toString_obj7.toString()); // false
+    console.log(Object.prototype.toString.call(toString_obj7)); // [object Boolean]
+
+    // ------ 8
+    const toString_obj8 = new Number(5);
+    console.log(toString_obj8.toString()); // 5
+    console.log(Object.prototype.toString.call(toString_obj8)); // [object Number]
+
+    // ------ 9
+    const toString_obj9 = new String("bird");
+    console.log(toString_obj9.toString()); // bird
+    console.log(Object.prototype.toString.call(toString_obj9)); // [object String]
+
+    // ------ 10
+    const toString_obj10 = new Date(2024, 10, 28);
+    console.log(toString_obj10.toString()); // Thu Nov 28 2024 00:00:00 GMT+0100 (Central European Standard Time)
+    console.log(Object.prototype.toString.call(toString_obj10)); // [object Date]
 
     // +++++++++++++++ Object.prototype.valueOf()
   
