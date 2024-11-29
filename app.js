@@ -9,6 +9,7 @@ import { typeConversion } from "./type-conversion.js";
 import { expressionsOperators } from "./expr-oper.js";
 import { controlFlow } from "./control-flow.js";
 import { numbers } from "./numbers.js";
+import { math } from "./math.js";
 
 // dataTypes();
 // letVar();
@@ -20,4 +21,5 @@ import { numbers } from "./numbers.js";
 // typeConversion();
 // expressionsOperators();
 // controlFlow();
-numbers();
+// numbers();
+math();
