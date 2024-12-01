@@ -10,6 +10,7 @@ import { expressionsOperators } from "./expr-oper.js";
 import { controlFlow } from "./control-flow.js";
 import { numbers } from "./numbers.js";
 import { math } from "./math.js";
+import { date } from "./date.js";
 
 // dataTypes();
 // letVar();
@@ -22,4 +23,5 @@ import { math } from "./math.js";
 // expressionsOperators();
 // controlFlow();
 // numbers();
-math();
+// math();
+date();

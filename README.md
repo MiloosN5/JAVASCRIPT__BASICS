@@ -15,3 +15,4 @@
 10. control flow
 11. Number (+ Number())
 12. Math namespace object
+13. Date object (Date())
