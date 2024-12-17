@@ -16,3 +16,4 @@
 11. Number (+ Number())
 12. Math namespace object
 13. Date object (Date())
+14. Function object (Function())
