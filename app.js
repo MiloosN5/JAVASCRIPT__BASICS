@@ -11,6 +11,7 @@ import { controlFlow } from "./control-flow.js";
 import { numbers } from "./numbers.js";
 import { math } from "./math.js";
 import { date } from "./date.js";
+import { regexp } from "./regexp.js";
 
 // dataTypes();
 // letVar();
@@ -24,4 +25,5 @@ import { date } from "./date.js";
 // controlFlow();
 // numbers();
 // math();
-date();
+// date();
+regexp();
