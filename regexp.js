@@ -645,7 +645,7 @@ export const regexp = () => {
             // ------ 2
             class MyRegExp_2 extends RegExp {
                 static get [Symbol.species]() {
-                  return this;
+                  return this; // this is 'default' for Symbol.species (MyRegExp_2 constructor)
                 }
             }
             
@@ -655,16 +655,22 @@ export const regexp = () => {
             console.log(regex_2 instanceof RegExp); // true
 
             // const newRegex_2 = regex_2.constructor[Symbol.species]('foo', 'g'); // TypeError: Class constructor MyRegExp_2 cannot be invoked without 'new' 
+            const newRegex_2 = new (regex_2.constructor[Symbol.species])('foo', 'g');
+            console.log(newRegex_2 instanceof MyRegExp_2); // true
+            console.log(newRegex_2 instanceof RegExp); // true
         
             // ------ 3
             class MyRegExp_3 extends RegExp { }
 
             const regex_3 = new MyRegExp_3('foo', 'g');
-            console.log('aa', regex_3.test('football')); // true
+            console.log(regex_3.test('football')); // true
             console.log(regex_3 instanceof MyRegExp_3); // true
             console.log(regex_3 instanceof RegExp); // true
             
             // const newRegex_3 = regex_3.constructor[Symbol.species]('foo', 'g'); // TypeError: Class constructor MyRegExp_3 cannot be invoked without 'new'
+            const newRegex_3 = new (regex_3.constructor[Symbol.species])('foo', 'g');
+            console.log(newRegex_3 instanceof MyRegExp_3); // true
+            console.log(newRegex_3 instanceof RegExp); // true
         
             // ------ 4
             class MyRegExp_4 extends RegExp {
@@ -1454,9 +1460,9 @@ export const regexp = () => {
 
     }
 
-    examples();
+    // examples();
     // constructor();
-    // staticProperties();
+    staticProperties();
     // staticMethods();
     // instanceProperties();
     // instanceMethods();
