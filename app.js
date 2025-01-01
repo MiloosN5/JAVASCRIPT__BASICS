@@ -12,6 +12,8 @@ import { numbers } from "./numbers.js";
 import { math } from "./math.js";
 import { date } from "./date.js";
 import { regexp } from "./regexp.js";
+import { functionObj } from "./function-obj.js";
+import { strings } from "./strings.js";
 
 // dataTypes();
 // letVar();
@@ -26,4 +28,6 @@ import { regexp } from "./regexp.js";
 // numbers();
 // math();
 // date();
-regexp();
+// regexp();
+// functionObj();
+strings();
