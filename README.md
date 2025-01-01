@@ -18,3 +18,4 @@
 13. Date object (Date())
 14. Function object (Function())
 15. regexp
+16. strings (+ String())
