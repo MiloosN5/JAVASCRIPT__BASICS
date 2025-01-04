@@ -228,7 +228,7 @@ export const strings = () => {
 
                 console.log(String.fromCodePoint(42)); // *
                 console.log(String.fromCodePoint(65, 90)); // AZ
-                console.log(String.fromCodePoint(0x404)); // "Є
+                console.log(String.fromCodePoint(0x404)); // Є
                 console.log(String.fromCodePoint(0x2f804)); // 你
                 console.log(String.fromCodePoint(194564)); // 你
                 console.log(String.fromCodePoint(0x1d306, 0x61, 0x1d307)); // 𝌆a𝌇
