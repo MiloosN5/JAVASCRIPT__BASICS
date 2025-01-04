@@ -497,7 +497,7 @@ export const strings = () => {
                 `The word "${word_1}" ${
                     sentence_1.includes(word_1) ? 'is' : 'is not'
                 } in the sentence`,
-            );
+            ); // The word "fox" is in the sentence
             console.log("Blue Whale".includes("blue")); // false
             console.log("Blue Whale".toLowerCase().includes("blue")); // true
 
