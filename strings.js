@@ -1291,6 +1291,14 @@ export const strings = () => {
                 for (const str of strings_1) {
                     console.log(str.toWellFormed());
                 }
+                /*
+                    ab�
+                    ab�c
+                    �ab
+                    c�ab
+                    abc
+                    ab😄c
+                */
 
             // 2 ✙ avoiding errors in encodeURI()
 
@@ -1401,7 +1409,7 @@ export const strings = () => {
         // toLowerCase();
         // toString();
         // toUpperCase();
-        // toWellFormed();
+        toWellFormed();
         // trim();
         // trimEnd();
         // trimStart();
@@ -1418,6 +1426,6 @@ export const strings = () => {
     // constructor();
     // staticMethods();
     // instanceProperties();
-    // instanceMethods();
+    instanceMethods();
 
 }
