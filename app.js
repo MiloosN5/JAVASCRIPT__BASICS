@@ -32,3 +32,4 @@ closure();
 // regexp();
 // functionObj();
 // strings();
+// internationalization();
