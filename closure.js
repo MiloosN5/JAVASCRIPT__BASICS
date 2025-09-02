@@ -292,7 +292,19 @@ export const closure = () => {
     const tracker = makeCounter(() => console.log('tick'));
 
     tracker();
+    /*
+        count: 0
+        tick
+    */
     tracker();
+    /*
+        count: 10
+        tick
+    */
     tracker();
+    /*
+        count: 20
+        tick
+    */
 
 }
