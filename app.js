@@ -14,6 +14,7 @@ import { date } from "./date.js";
 import { regexp } from "./regexp.js";
 import { functionObj } from "./function-obj.js";
 import { strings } from "./strings.js";
+import { internationalization } from "./internationalization.js";
 
 // dataTypes();
 // letVar();
