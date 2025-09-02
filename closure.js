@@ -276,5 +276,23 @@ export const closure = () => {
     const myTimer3 = timer();
     setTimeout(myTimer3, 3000); // Elapsed time: 3015 ms
     
+    // +++++++++++++++ Closure with state
+
+    let step = 10;
+
+    function makeCounter(callback) {
+        let count = 0;
+        return function() {
+            console.log('count:', count);
+            count += step;
+            callback();
+        };
+    }
+
+    const tracker = makeCounter(() => console.log('tick'));
+
+    tracker();
+    tracker();
+    tracker();
 
 }
